@@ -86,7 +86,7 @@ public class TestAxisAlignedLearner {
         float[][] rangeToSample = { { 0, 40 }, { 0, 40 } };
         float expectedAccuracy = 90;
         Learner learner = new AxisAlignedLearner(nClasses, rangeToSample);
-        TrainingOptions trainingOption = new TrainingOptions.Builder().nSample(10000).nTrees(10).treeMaxDepth(10)
+        TrainingOptions trainingOption = new TrainingOptions.Builder().nSample(10).nTrees(400).treeMaxDepth(10)
                 .build();
         SampleGenerator sampleGenerator = new Spiral2DSampleGenerator(nClasses);
         DataPoint[] trainingSet = generateData(nTraining, sampleGenerator);
